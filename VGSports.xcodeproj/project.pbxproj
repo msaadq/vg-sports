@@ -59,7 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93F6A4B32345EEBF00263D91 /* VG Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VG Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F6A4B32345EEBF00263D91 /* VGSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F6A4B62345EEBF00263D91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F6A4B82345EEBF00263D91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		93F6A4BB2345EEBF00263D91 /* VGSports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VGSports.xcdatamodel; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		93F6A4B42345EEBF00263D91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93F6A4B32345EEBF00263D91 /* VG Sports.app */,
+				93F6A4B32345EEBF00263D91 /* VGSports.app */,
 				93F6A4CC2345EEC200263D91 /* VGSportsTests.xctest */,
 				93F6A4D72345EEC200263D91 /* VGSportsUITests.xctest */,
 			);
@@ -241,7 +241,7 @@
 			);
 			name = VGSports;
 			productName = VGSports;
-			productReference = 93F6A4B32345EEBF00263D91 /* VG Sports.app */;
+			productReference = 93F6A4B32345EEBF00263D91 /* VGSports.app */;
 			productType = "com.apple.product-type.application";
 		};
 		93F6A4CB2345EEC200263D91 /* VGSportsTests */ = {
@@ -556,7 +556,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSports;
-				PRODUCT_NAME = "VG Sports";
+				PRODUCT_NAME = VGSports;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -576,7 +576,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSports;
-				PRODUCT_NAME = "VG Sports";
+				PRODUCT_NAME = VGSports;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

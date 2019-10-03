@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93F6A4B72345EEBF00263D91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4B62345EEBF00263D91 /* AppDelegate.swift */; };
+		93F6A4B92345EEBF00263D91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4B82345EEBF00263D91 /* SceneDelegate.swift */; };
+		93F6A4BC2345EEBF00263D91 /* VGSports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4BA2345EEBF00263D91 /* VGSports.xcdatamodeld */; };
+		93F6A4C02345EEC100263D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F6A4BF2345EEC100263D91 /* Assets.xcassets */; };
+		93F6A4C32345EEC100263D91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F6A4C22345EEC100263D91 /* Preview Assets.xcassets */; };
+		93F6A4C62345EEC100263D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F6A4C42345EEC100263D91 /* LaunchScreen.storyboard */; };
+		93F6A4D12345EEC200263D91 /* VGSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4D02345EEC200263D91 /* VGSportsTests.swift */; };
+		93F6A4DC2345EEC200263D91 /* VGSportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4DB2345EEC200263D91 /* VGSportsUITests.swift */; };
+		93F6A4F12345F2E700263D91 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4EF2345F2E700263D91 /* APIService.swift */; };
+		93F6A4F22345F2E700263D91 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4EF2345F2E700263D91 /* APIService.swift */; };
+		93F6A4F32345F2E700263D91 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4EF2345F2E700263D91 /* APIService.swift */; };
+		93F6A4F42345F2E700263D91 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F02345F2E700263D91 /* LogoService.swift */; };
+		93F6A4F52345F2E700263D91 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F02345F2E700263D91 /* LogoService.swift */; };
+		93F6A4F62345F2E700263D91 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F02345F2E700263D91 /* LogoService.swift */; };
+		93F6A4F82345F32D00263D91 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F72345F32D00263D91 /* SportEvent.swift */; };
+		93F6A4F92345F32D00263D91 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F72345F32D00263D91 /* SportEvent.swift */; };
+		93F6A4FA2345F32D00263D91 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F72345F32D00263D91 /* SportEvent.swift */; };
+		93F6A4FC2345F33F00263D91 /* LeagueListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4FB2345F33F00263D91 /* LeagueListing.swift */; };
+		93F6A4FD2345F33F00263D91 /* LeagueListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4FB2345F33F00263D91 /* LeagueListing.swift */; };
+		93F6A4FE2345F33F00263D91 /* LeagueListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4FB2345F33F00263D91 /* LeagueListing.swift */; };
+		93F6A5002345F36C00263D91 /* MatchDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4FF2345F36C00263D91 /* MatchDetailsVM.swift */; };
+		93F6A5012345F36C00263D91 /* MatchDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4FF2345F36C00263D91 /* MatchDetailsVM.swift */; };
+		93F6A5022345F36C00263D91 /* MatchDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4FF2345F36C00263D91 /* MatchDetailsVM.swift */; };
+		93F6A5042345F37900263D91 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A5032345F37900263D91 /* MatchDetailsView.swift */; };
+		93F6A5052345F37900263D91 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A5032345F37900263D91 /* MatchDetailsView.swift */; };
+		93F6A5062345F37900263D91 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A5032345F37900263D91 /* MatchDetailsView.swift */; };
+		93F6A5082345F38D00263D91 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A5072345F38D00263D91 /* ScheduleView.swift */; };
+		93F6A5092345F38D00263D91 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A5072345F38D00263D91 /* ScheduleView.swift */; };
+		93F6A50A2345F38D00263D91 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A5072345F38D00263D91 /* ScheduleView.swift */; };
+		93F6A50C2345F39600263D91 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A50B2345F39600263D91 /* ScheduleVM.swift */; };
+		93F6A50D2345F39600263D91 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A50B2345F39600263D91 /* ScheduleVM.swift */; };
+		93F6A50E2345F39600263D91 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A50B2345F39600263D91 /* ScheduleVM.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93F6A4CD2345EEC200263D91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93F6A4AB2345EEBF00263D91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93F6A4B22345EEBF00263D91;
+			remoteInfo = VGSports;
+		};
+		93F6A4D82345EEC200263D91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93F6A4AB2345EEBF00263D91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93F6A4B22345EEBF00263D91;
+			remoteInfo = VGSports;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93F6A4B32345EEBF00263D91 /* VG Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VG Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F6A4B62345EEBF00263D91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93F6A4B82345EEBF00263D91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		93F6A4BB2345EEBF00263D91 /* VGSports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VGSports.xcdatamodel; sourceTree = "<group>"; };
+		93F6A4BF2345EEC100263D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93F6A4C22345EEC100263D91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93F6A4C52345EEC100263D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93F6A4C72345EEC100263D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F6A4CC2345EEC200263D91 /* VGSportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGSportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F6A4D02345EEC200263D91 /* VGSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSportsTests.swift; sourceTree = "<group>"; };
+		93F6A4D22345EEC200263D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F6A4D72345EEC200263D91 /* VGSportsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGSportsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F6A4DB2345EEC200263D91 /* VGSportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSportsUITests.swift; sourceTree = "<group>"; };
+		93F6A4DD2345EEC200263D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F6A4EF2345F2E700263D91 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		93F6A4F02345F2E700263D91 /* LogoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoService.swift; sourceTree = "<group>"; };
+		93F6A4F72345F32D00263D91 /* SportEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEvent.swift; sourceTree = "<group>"; };
+		93F6A4FB2345F33F00263D91 /* LeagueListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueListing.swift; sourceTree = "<group>"; };
+		93F6A4FF2345F36C00263D91 /* MatchDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsVM.swift; sourceTree = "<group>"; };
+		93F6A5032345F37900263D91 /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
+		93F6A5072345F38D00263D91 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		93F6A50B2345F39600263D91 /* ScheduleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVM.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93F6A4B02345EEBF00263D91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F6A4C92345EEC200263D91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F6A4D42345EEC200263D91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93F6A4AA2345EEBF00263D91 = {
+			isa = PBXGroup;
+			children = (
+				93F6A4B52345EEBF00263D91 /* VGSports */,
+				93F6A4CF2345EEC200263D91 /* VGSportsTests */,
+				93F6A4DA2345EEC200263D91 /* VGSportsUITests */,
+				93F6A4B42345EEBF00263D91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93F6A4B42345EEBF00263D91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4B32345EEBF00263D91 /* VG Sports.app */,
+				93F6A4CC2345EEC200263D91 /* VGSportsTests.xctest */,
+				93F6A4D72345EEC200263D91 /* VGSportsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93F6A4B52345EEBF00263D91 /* VGSports */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4E92345F25E00263D91 /* Launch */,
+				93F6A4EC2345F28600263D91 /* Components */,
+				93F6A4EB2345F28200263D91 /* Models */,
+				93F6A4EA2345F27700263D91 /* Services */,
+				93F6A4BF2345EEC100263D91 /* Assets.xcassets */,
+				93F6A4C42345EEC100263D91 /* LaunchScreen.storyboard */,
+				93F6A4C72345EEC100263D91 /* Info.plist */,
+				93F6A4BA2345EEBF00263D91 /* VGSports.xcdatamodeld */,
+				93F6A4C12345EEC100263D91 /* Preview Content */,
+			);
+			path = VGSports;
+			sourceTree = "<group>";
+		};
+		93F6A4C12345EEC100263D91 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4C22345EEC100263D91 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93F6A4CF2345EEC200263D91 /* VGSportsTests */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4D02345EEC200263D91 /* VGSportsTests.swift */,
+				93F6A4D22345EEC200263D91 /* Info.plist */,
+			);
+			path = VGSportsTests;
+			sourceTree = "<group>";
+		};
+		93F6A4DA2345EEC200263D91 /* VGSportsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4DB2345EEC200263D91 /* VGSportsUITests.swift */,
+				93F6A4DD2345EEC200263D91 /* Info.plist */,
+			);
+			path = VGSportsUITests;
+			sourceTree = "<group>";
+		};
+		93F6A4E92345F25E00263D91 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4B62345EEBF00263D91 /* AppDelegate.swift */,
+				93F6A4B82345EEBF00263D91 /* SceneDelegate.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		93F6A4EA2345F27700263D91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4EF2345F2E700263D91 /* APIService.swift */,
+				93F6A4F02345F2E700263D91 /* LogoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		93F6A4EB2345F28200263D91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4F72345F32D00263D91 /* SportEvent.swift */,
+				93F6A4FB2345F33F00263D91 /* LeagueListing.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93F6A4EC2345F28600263D91 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4EE2345F2AE00263D91 /* MatchDetails */,
+				93F6A4ED2345F2A800263D91 /* Schedule */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		93F6A4ED2345F2A800263D91 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A50B2345F39600263D91 /* ScheduleVM.swift */,
+				93F6A5072345F38D00263D91 /* ScheduleView.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		93F6A4EE2345F2AE00263D91 /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				93F6A4FF2345F36C00263D91 /* MatchDetailsVM.swift */,
+				93F6A5032345F37900263D91 /* MatchDetailsView.swift */,
+			);
+			path = MatchDetails;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93F6A4B22345EEBF00263D91 /* VGSports */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93F6A4E02345EEC200263D91 /* Build configuration list for PBXNativeTarget "VGSports" */;
+			buildPhases = (
+				93F6A4AF2345EEBF00263D91 /* Sources */,
+				93F6A4B02345EEBF00263D91 /* Frameworks */,
+				93F6A4B12345EEBF00263D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VGSports;
+			productName = VGSports;
+			productReference = 93F6A4B32345EEBF00263D91 /* VG Sports.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93F6A4CB2345EEC200263D91 /* VGSportsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93F6A4E32345EEC200263D91 /* Build configuration list for PBXNativeTarget "VGSportsTests" */;
+			buildPhases = (
+				93F6A4C82345EEC200263D91 /* Sources */,
+				93F6A4C92345EEC200263D91 /* Frameworks */,
+				93F6A4CA2345EEC200263D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93F6A4CE2345EEC200263D91 /* PBXTargetDependency */,
+			);
+			name = VGSportsTests;
+			productName = VGSportsTests;
+			productReference = 93F6A4CC2345EEC200263D91 /* VGSportsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93F6A4D62345EEC200263D91 /* VGSportsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93F6A4E62345EEC200263D91 /* Build configuration list for PBXNativeTarget "VGSportsUITests" */;
+			buildPhases = (
+				93F6A4D32345EEC200263D91 /* Sources */,
+				93F6A4D42345EEC200263D91 /* Frameworks */,
+				93F6A4D52345EEC200263D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93F6A4D92345EEC200263D91 /* PBXTargetDependency */,
+			);
+			name = VGSportsUITests;
+			productName = VGSportsUITests;
+			productReference = 93F6A4D72345EEC200263D91 /* VGSportsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93F6A4AB2345EEBF00263D91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Canal Digital";
+				TargetAttributes = {
+					93F6A4B22345EEBF00263D91 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					93F6A4CB2345EEC200263D91 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 93F6A4B22345EEBF00263D91;
+					};
+					93F6A4D62345EEC200263D91 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 93F6A4B22345EEBF00263D91;
+					};
+				};
+			};
+			buildConfigurationList = 93F6A4AE2345EEBF00263D91 /* Build configuration list for PBXProject "VGSports" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93F6A4AA2345EEBF00263D91;
+			productRefGroup = 93F6A4B42345EEBF00263D91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93F6A4B22345EEBF00263D91 /* VGSports */,
+				93F6A4CB2345EEC200263D91 /* VGSportsTests */,
+				93F6A4D62345EEC200263D91 /* VGSportsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93F6A4B12345EEBF00263D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F6A4C62345EEC100263D91 /* LaunchScreen.storyboard in Resources */,
+				93F6A4C32345EEC100263D91 /* Preview Assets.xcassets in Resources */,
+				93F6A4C02345EEC100263D91 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F6A4CA2345EEC200263D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F6A4D52345EEC200263D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93F6A4AF2345EEBF00263D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F6A4F42345F2E700263D91 /* LogoService.swift in Sources */,
+				93F6A4B72345EEBF00263D91 /* AppDelegate.swift in Sources */,
+				93F6A4F12345F2E700263D91 /* APIService.swift in Sources */,
+				93F6A5042345F37900263D91 /* MatchDetailsView.swift in Sources */,
+				93F6A4FC2345F33F00263D91 /* LeagueListing.swift in Sources */,
+				93F6A4B92345EEBF00263D91 /* SceneDelegate.swift in Sources */,
+				93F6A5002345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
+				93F6A50C2345F39600263D91 /* ScheduleVM.swift in Sources */,
+				93F6A4BC2345EEBF00263D91 /* VGSports.xcdatamodeld in Sources */,
+				93F6A5082345F38D00263D91 /* ScheduleView.swift in Sources */,
+				93F6A4F82345F32D00263D91 /* SportEvent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F6A4C82345EEC200263D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F6A4F52345F2E700263D91 /* LogoService.swift in Sources */,
+				93F6A4FD2345F33F00263D91 /* LeagueListing.swift in Sources */,
+				93F6A5052345F37900263D91 /* MatchDetailsView.swift in Sources */,
+				93F6A4F92345F32D00263D91 /* SportEvent.swift in Sources */,
+				93F6A4F22345F2E700263D91 /* APIService.swift in Sources */,
+				93F6A5092345F38D00263D91 /* ScheduleView.swift in Sources */,
+				93F6A4D12345EEC200263D91 /* VGSportsTests.swift in Sources */,
+				93F6A50D2345F39600263D91 /* ScheduleVM.swift in Sources */,
+				93F6A5012345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F6A4D32345EEC200263D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F6A4F62345F2E700263D91 /* LogoService.swift in Sources */,
+				93F6A4FE2345F33F00263D91 /* LeagueListing.swift in Sources */,
+				93F6A5062345F37900263D91 /* MatchDetailsView.swift in Sources */,
+				93F6A4FA2345F32D00263D91 /* SportEvent.swift in Sources */,
+				93F6A4F32345F2E700263D91 /* APIService.swift in Sources */,
+				93F6A50A2345F38D00263D91 /* ScheduleView.swift in Sources */,
+				93F6A4DC2345EEC200263D91 /* VGSportsUITests.swift in Sources */,
+				93F6A50E2345F39600263D91 /* ScheduleVM.swift in Sources */,
+				93F6A5022345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93F6A4CE2345EEC200263D91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93F6A4B22345EEBF00263D91 /* VGSports */;
+			targetProxy = 93F6A4CD2345EEC200263D91 /* PBXContainerItemProxy */;
+		};
+		93F6A4D92345EEC200263D91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93F6A4B22345EEBF00263D91 /* VGSports */;
+			targetProxy = 93F6A4D82345EEC200263D91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93F6A4C42345EEC100263D91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F6A4C52345EEC100263D91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93F6A4DE2345EEC200263D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93F6A4DF2345EEC200263D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93F6A4E12345EEC200263D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"VGSports/Preview Content\"";
+				DEVELOPMENT_TEAM = 5YQB3TL427;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = VGSports/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSports;
+				PRODUCT_NAME = "VG Sports";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93F6A4E22345EEC200263D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"VGSports/Preview Content\"";
+				DEVELOPMENT_TEAM = 5YQB3TL427;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = VGSports/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSports;
+				PRODUCT_NAME = "VG Sports";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93F6A4E42345EEC200263D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YQB3TL427;
+				INFOPLIST_FILE = VGSportsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSportsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VGSports.app/VGSports";
+			};
+			name = Debug;
+		};
+		93F6A4E52345EEC200263D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YQB3TL427;
+				INFOPLIST_FILE = VGSportsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSportsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VGSports.app/VGSports";
+			};
+			name = Release;
+		};
+		93F6A4E72345EEC200263D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YQB3TL427;
+				INFOPLIST_FILE = VGSportsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSportsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VGSports;
+			};
+			name = Debug;
+		};
+		93F6A4E82345EEC200263D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YQB3TL427;
+				INFOPLIST_FILE = VGSportsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saad.VGSportsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VGSports;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93F6A4AE2345EEBF00263D91 /* Build configuration list for PBXProject "VGSports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F6A4DE2345EEC200263D91 /* Debug */,
+				93F6A4DF2345EEC200263D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93F6A4E02345EEC200263D91 /* Build configuration list for PBXNativeTarget "VGSports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F6A4E12345EEC200263D91 /* Debug */,
+				93F6A4E22345EEC200263D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93F6A4E32345EEC200263D91 /* Build configuration list for PBXNativeTarget "VGSportsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F6A4E42345EEC200263D91 /* Debug */,
+				93F6A4E52345EEC200263D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93F6A4E62345EEC200263D91 /* Build configuration list for PBXNativeTarget "VGSportsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F6A4E72345EEC200263D91 /* Debug */,
+				93F6A4E82345EEC200263D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93F6A4BA2345EEBF00263D91 /* VGSports.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93F6A4BB2345EEBF00263D91 /* VGSports.xcdatamodel */,
+			);
+			currentVersion = 93F6A4BB2345EEBF00263D91 /* VGSports.xcdatamodel */;
+			path = VGSports.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 93F6A4AB2345EEBF00263D91 /* Project object */;
+}

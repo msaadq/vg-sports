@@ -10,12 +10,13 @@ import SwiftUI
 
 struct MatchDetailsView: View {
     @ObservedObject var viewModel = MatchDetailsVM()
+    @State var selectedEventId: Int!
     
     var body: some View {
         NavigationView {
             Text("Hello Idiot!")
         }.onAppear {
-            self.viewModel.loadEventDetails()
+            self.viewModel.loadEventDetails(eventID: self.selectedEventId)
         }.onDisappear {
             self.viewModel.cancellable?.cancel()
         }

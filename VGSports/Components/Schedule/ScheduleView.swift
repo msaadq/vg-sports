@@ -14,12 +14,19 @@ struct ScheduleView: View {
     
     var body: some View {
         NavigationView {
-            List(self.viewModel.listings) { listing in
-                HStack {
-                    Text(listing.name)
+            List {
+                ForEach(self.viewModel.listings) { (listing: LeagueListing) in
+                    Section(header: Text(listing.name)) {
+                        ForEach(listing.events) { (event: SportEvent) in
+                            HStack(alignment: .center) {
+                                Spacer()
+                                Text("ID: \(event.id)")
+                                Text("ID: \(event.awayTeam.id)")
+                            }
+                        }
+                    }
                 }
-            }
-            Text("Hello Idiot")
+            }.navigationBarTitle("Today")
         }.onAppear {
             self.viewModel.loadSchedule()
         }.onDisappear {

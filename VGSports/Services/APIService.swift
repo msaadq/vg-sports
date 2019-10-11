@@ -8,26 +8,27 @@
 
 import Foundation
 import Combine
+import UIKit
 
 // MARK: - APIService
-struct APIService {
+class APIService {
     static let shared = APIService()
-    
-    let baseURL = URL(string: "https://sports-app-code-test.herokuapp.com/")!
+
+    static let baseURL = URL(string: "https://sports-app-code-test.herokuapp.com/")!
     let decoder = JSONDecoder()
-    
+
     // MARK: - Errors
     enum APIError: Error {
-        case jsonDecodingError(error: Error)
+        case decodingError
         case httpError
-        case unknownError
+        case unknownError(error: Error)
     }
-    
+
     // MARK: - End points
     enum Endpoint {
         case events
         case eventDetails(eventId: Int)
-        
+
         func path() -> String {
             switch self {
             case .events:
@@ -37,10 +38,35 @@ struct APIService {
             }
         }
     }
-    
-    // MARK: - GET Request
-    func GET<T: Codable>(modelObject: T.Type, endpoint: Endpoint, params: [String: String]?) -> AnyPublisher<T, APIError> {
-        let queryURL = baseURL.appendingPathComponent(endpoint.path())
+
+    // MARK: - Logo Sizes
+    enum LogoSize: String, Codable {
+        case small = "clip-32x32"
+        case medium = "clip-56x56"
+        case large = "clip-112x112"
+    }
+
+    // MARK: - URL Request Publisher
+    func getRemoteDataPublisher(url: URLRequest) -> AnyPublisher<Data, Error> {
+        return URLSession.shared.dataTaskPublisher(for: url)
+        .retry(3)
+        .tryMap { data, response -> Data in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("HTTP Error")
+                throw APIError.httpError
+            }
+            return data
+        }
+        .mapError { error in
+            print(error.localizedDescription)
+            return APIError.unknownError(error: error)
+        }
+        .eraseToAnyPublisher()
+    }
+
+    // MARK: - URL Request Mapper
+    func getAPIResponseMapper<T: Codable>(modelObject: T.Type, baseURL: URL? = baseURL, endpoint: Endpoint, params: [String: String]? = nil) -> AnyPublisher<T, APIService.APIError> {
+        let queryURL = baseURL!.appendingPathComponent(endpoint.path())
         var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)!
         components.queryItems = []
         if let params = params {
@@ -50,19 +76,37 @@ struct APIService {
         }
         var request = URLRequest(url: components.url!)
         request.httpMethod = "GET"
-        
-        return URLSession.shared.dataTaskPublisher(for: request)
-            .tryMap { output in
-                guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else { throw APIError.httpError }
-                return output.data
-            }
+
+        return getRemoteDataPublisher(url: request)
             .decode(type: T.self, decoder: JSONDecoder())
-            .mapError{
-                if type(of: $0) == Swift.DecodingError.self {
-                    return APIError.jsonDecodingError(error: $0)
+            .mapError{ error in
+                if type(of: error) == Swift.DecodingError.self {
+                    print("JSON decoding error")
+                    return APIError.decodingError
                 }
-                return APIError.unknownError
+                return APIError.unknownError(error: error)
             }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+
+    // MARK: - Logo Image Fetcher
+    func getLogoImageFetcher(imageUrl: String, size: LogoSize) -> AnyPublisher<UIImage, Never> {
+        var components = URLComponents(url: URL(string: imageUrl)!, resolvingAgainstBaseURL: true)!
+        components.queryItems = [URLQueryItem(name: "rule", value: size.rawValue)]
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "GET"
+
+        return getRemoteDataPublisher(url: request)
+            .tryMap { data in
+                guard let image = UIImage(data: data) else {
+                    print("Image decoding error")
+                    throw APIError.decodingError
+                }
+                return image
+            }
+            .replaceError(with: UIImage(named: "FailedPlaceholder")!)
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }

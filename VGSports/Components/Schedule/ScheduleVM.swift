@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 public class ScheduleVM: ObservableObject {
     @Published var listings = [LeagueListing]()
@@ -16,16 +17,32 @@ public class ScheduleVM: ObservableObject {
     var cancellable: AnyCancellable?
 
     func loadSchedule() {
-        cancellable = APIService.shared.GET(modelObject: [LeagueListing].self, endpoint: .events, params: ["date": "today"])
-            .receive(on: DispatchQueue.main)
+        guard Reachability.isConnectedToNetwork() else {
+            connectionOffline = true
+            return
+        }
+        
+        connectionOffline = false
+        cancellable = APIService.shared.getAPIResponseMapper(modelObject: [LeagueListing].self, endpoint: .events, params: ["date": "today"])
             .sink(receiveCompletion: { (completion) in
                 switch completion {
                 case .failure(let error):
-                    self.connectionOffline = true
+                    print(error.localizedDescription)
                 case .finished:
-                    print("Request Successful")
+                    self.loadLeagueLogos()
                 }
-            }, receiveValue: { self.listings = $0 })
+            }, receiveValue: {
+                self.listings = $0
+            })
+    }
+    
+    func loadLeagueLogos() {
+        let size = APIService.LogoSize.large
+        
+        for (index, league) in listings.enumerated() {
+            let _ = APIService.shared.getLogoImageFetcher(imageUrl: league.logoUrl, size: size)
+                .sink { self.listings[index].logos[size] = $0 }
+        }
     }
     
     deinit {

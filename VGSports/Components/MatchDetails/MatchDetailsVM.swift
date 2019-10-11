@@ -10,24 +10,41 @@ import Foundation
 import Combine
 
 public class MatchDetailsVM: ObservableObject {
-    @Published var eventDetails: SportEvent?
+    @Published var eventDetails: SportEvent!
     @Published var connectionOffline = false
     
     var cancellable: AnyCancellable?
 
-    func loadEventDetails() {
-        cancellable = APIService.shared.GET(modelObject: SportEvent.self, endpoint: .eventDetails(eventId: 377462), params: nil)
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { (completion) in
-                switch completion {
-                case .failure(let error):
-                    self.connectionOffline = true
-                case .finished:
-                    print("Request Successful")
-                }
-            }, receiveValue: { self.eventDetails = $0 })
+    func loadEventDetails(eventID: Int) {
+        guard Reachability.isConnectedToNetwork() else {
+            connectionOffline = true
+            return
+        }
+        
+        connectionOffline = false
+        cancellable = APIService.shared.getAPIResponseMapper(modelObject: EventWrapper.self, endpoint: .eventDetails(eventId: eventID))
+           .sink(receiveCompletion: { (completion) in
+               switch completion {
+               case .failure(let error):
+                    print(error.localizedDescription)
+               case .finished:
+                    self.loadEventTeamsLogos()
+               }
+           }, receiveValue: {
+                self.eventDetails = $0.event
+           })
     }
-    
+
+    func loadEventTeamsLogos() {
+        let size = APIService.LogoSize.large
+        
+        let _ = APIService.shared.getLogoImageFetcher(imageUrl: eventDetails.homeTeam.logoUrl, size: size)
+            .sink { self.eventDetails.homeTeam.logos[size] = $0 }
+
+        let _ = APIService.shared.getLogoImageFetcher(imageUrl: eventDetails.awayTeam.logoUrl, size: size)
+            .sink { self.eventDetails.awayTeam.logos[size] = $0 }
+    }
+
     deinit {
         cancellable?.cancel()
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93EA442523511D95007397C1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EA442423511D95007397C1 /* Reachability.swift */; };
+		93EA442623511D95007397C1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EA442423511D95007397C1 /* Reachability.swift */; };
+		93EA442723511D95007397C1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EA442423511D95007397C1 /* Reachability.swift */; };
 		93F6A4B72345EEBF00263D91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4B62345EEBF00263D91 /* AppDelegate.swift */; };
 		93F6A4B92345EEBF00263D91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4B82345EEBF00263D91 /* SceneDelegate.swift */; };
 		93F6A4BC2345EEBF00263D91 /* VGSports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4BA2345EEBF00263D91 /* VGSports.xcdatamodeld */; };
@@ -18,9 +21,6 @@
 		93F6A4F12345F2E700263D91 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4EF2345F2E700263D91 /* APIService.swift */; };
 		93F6A4F22345F2E700263D91 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4EF2345F2E700263D91 /* APIService.swift */; };
 		93F6A4F32345F2E700263D91 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4EF2345F2E700263D91 /* APIService.swift */; };
-		93F6A4F42345F2E700263D91 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F02345F2E700263D91 /* LogoService.swift */; };
-		93F6A4F52345F2E700263D91 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F02345F2E700263D91 /* LogoService.swift */; };
-		93F6A4F62345F2E700263D91 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F02345F2E700263D91 /* LogoService.swift */; };
 		93F6A4F82345F32D00263D91 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F72345F32D00263D91 /* SportEvent.swift */; };
 		93F6A4F92345F32D00263D91 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F72345F32D00263D91 /* SportEvent.swift */; };
 		93F6A4FA2345F32D00263D91 /* SportEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A4F72345F32D00263D91 /* SportEvent.swift */; };
@@ -59,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93EA442423511D95007397C1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		93F6A4B32345EEBF00263D91 /* VGSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F6A4B62345EEBF00263D91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F6A4B82345EEBF00263D91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		93F6A4DB2345EEC200263D91 /* VGSportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSportsUITests.swift; sourceTree = "<group>"; };
 		93F6A4DD2345EEC200263D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93F6A4EF2345F2E700263D91 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		93F6A4F02345F2E700263D91 /* LogoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoService.swift; sourceTree = "<group>"; };
 		93F6A4F72345F32D00263D91 /* SportEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEvent.swift; sourceTree = "<group>"; };
 		93F6A4FB2345F33F00263D91 /* LeagueListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueListing.swift; sourceTree = "<group>"; };
 		93F6A4FF2345F36C00263D91 /* MatchDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsVM.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				93F6A4EF2345F2E700263D91 /* APIService.swift */,
-				93F6A4F02345F2E700263D91 /* LogoService.swift */,
+				93EA442423511D95007397C1 /* Reachability.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -355,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F6A4F42345F2E700263D91 /* LogoService.swift in Sources */,
 				93F6A4B72345EEBF00263D91 /* AppDelegate.swift in Sources */,
 				93F6A4F12345F2E700263D91 /* APIService.swift in Sources */,
 				93F6A5042345F37900263D91 /* MatchDetailsView.swift in Sources */,
@@ -363,6 +362,7 @@
 				93F6A4B92345EEBF00263D91 /* SceneDelegate.swift in Sources */,
 				93F6A5002345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
 				93F6A50C2345F39600263D91 /* ScheduleVM.swift in Sources */,
+				93EA442523511D95007397C1 /* Reachability.swift in Sources */,
 				93F6A4BC2345EEBF00263D91 /* VGSports.xcdatamodeld in Sources */,
 				93F6A5082345F38D00263D91 /* ScheduleView.swift in Sources */,
 				93F6A4F82345F32D00263D91 /* SportEvent.swift in Sources */,
@@ -373,12 +373,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F6A4F52345F2E700263D91 /* LogoService.swift in Sources */,
 				93F6A4FD2345F33F00263D91 /* LeagueListing.swift in Sources */,
 				93F6A5052345F37900263D91 /* MatchDetailsView.swift in Sources */,
 				93F6A4F92345F32D00263D91 /* SportEvent.swift in Sources */,
 				93F6A4F22345F2E700263D91 /* APIService.swift in Sources */,
 				93F6A5092345F38D00263D91 /* ScheduleView.swift in Sources */,
+				93EA442623511D95007397C1 /* Reachability.swift in Sources */,
 				93F6A4D12345EEC200263D91 /* VGSportsTests.swift in Sources */,
 				93F6A50D2345F39600263D91 /* ScheduleVM.swift in Sources */,
 				93F6A5012345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
@@ -389,12 +389,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F6A4F62345F2E700263D91 /* LogoService.swift in Sources */,
 				93F6A4FE2345F33F00263D91 /* LeagueListing.swift in Sources */,
 				93F6A5062345F37900263D91 /* MatchDetailsView.swift in Sources */,
 				93F6A4FA2345F32D00263D91 /* SportEvent.swift in Sources */,
 				93F6A4F32345F2E700263D91 /* APIService.swift in Sources */,
 				93F6A50A2345F38D00263D91 /* ScheduleView.swift in Sources */,
+				93EA442723511D95007397C1 /* Reachability.swift in Sources */,
 				93F6A4DC2345EEC200263D91 /* VGSportsUITests.swift in Sources */,
 				93F6A50E2345F39600263D91 /* ScheduleVM.swift in Sources */,
 				93F6A5022345F36C00263D91 /* MatchDetailsVM.swift in Sources */,

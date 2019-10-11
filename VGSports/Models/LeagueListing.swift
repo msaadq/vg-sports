@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - LeagueListing
 struct LeagueListing: Codable, Identifiable {
@@ -14,7 +15,10 @@ struct LeagueListing: Codable, Identifiable {
     let name: String
     let logoUrl: String
     let events: [SportEvent]
-    
-    let logos: [LogoService.Size:String]?
-}
 
+    private enum CodingKeys: String, CodingKey {
+        case id, name, logoUrl, events
+    }
+
+    var logos = [APIService.LogoSize:UIImage]()
+}

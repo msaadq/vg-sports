@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+// MARK: - EventWrapper
+struct EventWrapper: Codable {
+    let event: SportEvent
+}
 
 // MARK: - SportEvent
 struct SportEvent: Codable, Identifiable {
     let id: Int
     let startDate: String
-    let homeTeam, awayTeam: Team
+    var homeTeam, awayTeam: Team
     let venue: Venue?
     let status: Status
     let result: Result
@@ -25,8 +31,12 @@ struct Team: Codable {
     let id, name: String
     let logoUrl: String
     let isWinner: Bool
-    
-    let logos: [LogoService.Size:String]?
+
+    private enum CodingKeys: String, CodingKey {
+        case id, name, logoUrl, isWinner
+    }
+
+    var logos = [APIService.LogoSize:UIImage]()
 }
 
 // MARK: - Result
@@ -48,5 +58,3 @@ struct Status: Codable {
 struct Venue: Codable {
     let name, city: String
 }
-
-

@@ -15,21 +15,24 @@ struct ScheduleView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(self.viewModel.listings) { (listing: LeagueListing) in
-                    Section(header: Text(listing.name)) {
-                        ForEach(listing.events) { (event: SportEvent) in
-                            HStack(alignment: .center) {
-                                Spacer()
-                                Text("ID: \(event.id)")
-                                Text("ID: \(event.awayTeam.id)")
-                            }
-                        }
-                    }
+                ForEach(self.viewModel.listings, id: \.id) { league in
+                    LeagueRow(league: league)
+                    .listRowBackground(Color("BackgroundColor"))
                 }
-            }.navigationBarTitle("Today")
-        }.onAppear {
+                .listRowInsets(EdgeInsets())
+            }
+            .navigationBarTitle(Text("Today"))
+        }
+        .onAppear {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = UIColor(named: "BackgroundColor")
+            UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
             self.viewModel.loadSchedule()
-        }.onDisappear {
+        }
+        .onDisappear {
             self.viewModel.cancellable?.cancel()
         }
     }

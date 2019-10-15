@@ -14,6 +14,8 @@ public class MatchDetailsVM: ObservableObject {
     @Published var connectionOffline = false
     
     var cancellable: AnyCancellable?
+    
+    
 
     func loadEventDetails(eventID: Int) {
         guard Reachability.isConnectedToNetwork() else {
@@ -28,21 +30,12 @@ public class MatchDetailsVM: ObservableObject {
                case .failure(let error):
                     print(error.localizedDescription)
                case .finished:
-                    self.loadEventTeamsLogos()
+                print("finished")
+//                    self.loadEventTeamsLogos()
                }
            }, receiveValue: {
                 self.eventDetails = $0.event
            })
-    }
-
-    func loadEventTeamsLogos() {
-        let size = APIService.LogoSize.large
-        
-        let _ = APIService.shared.getLogoImageFetcher(imageUrl: eventDetails.homeTeam.logoUrl, size: size)
-            .sink { self.eventDetails.homeTeam.logos[size] = $0 }
-
-        let _ = APIService.shared.getLogoImageFetcher(imageUrl: eventDetails.awayTeam.logoUrl, size: size)
-            .sink { self.eventDetails.awayTeam.logos[size] = $0 }
     }
 
     deinit {

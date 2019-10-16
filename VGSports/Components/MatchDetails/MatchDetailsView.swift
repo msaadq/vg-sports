@@ -44,40 +44,42 @@ struct MatchDetailsView: View {
                     EventTeamRep(logo: vm.eventDetails.awayTeam.logo, teamName: vm.eventDetails.awayTeam.name, isWinner: vm.eventDetails.awayTeam.isWinner)
                 }
                 
-                VStack(spacing: 30) {
-                    HStack(alignment: .bottom, spacing: 0) {
-                        Image("VenueIcon")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .shadow(radius: 10)
-                        Text(vm.eventDetails.venue?.getVenue() ?? "Unknown location")
-                            .font(.headline)
-                            .padding(.leading, 15)
-                            .padding(.top, 5)
-                    }
-                    .padding(.top)
-                    .padding(.leading)
-                    
-                    Button(action: {
-                        let url = "comgooglemaps://?daddr=\(self.vm.eventDetails.venue!.getVenue().replacingOccurrences(of: " ", with: "+").replaceSpecialCharacters() ?? "Unknown location")"
-                        
-                        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
-                          UIApplication.shared.openURL(URL(string: url)!
-                            )
-                        } else {
-                          print("Can't use comgooglemaps://");
+                if !vm.connectionOffline {
+                    VStack(spacing: 30) {
+                        HStack(alignment: .bottom, spacing: 0) {
+                            Image("VenueIcon")
+                                .renderingMode(.original)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 20)
+                                .shadow(radius: 10)
+                            Text(vm.eventDetails.venue?.getVenue() ?? "Unknown location")
+                                .font(.headline)
+                                .padding(.leading, 15)
+                                .padding(.top, 5)
                         }
+                        .padding(.top)
+                        .padding(.leading)
                         
-                    }) {
-                        NavigationButton(text: "Get Directions ")
+                        Button(action: {
+                            let url = "comgooglemaps://?daddr=\(self.vm.eventDetails.venue!.getVenue().replacingOccurrences(of: " ", with: "+").replaceSpecialCharacters() ?? "Unknown location")"
+                            
+                            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+                              UIApplication.shared.openURL(URL(string: url)!
+                                )
+                            } else {
+                              print("Can't use comgooglemaps://");
+                            }
+                            
+                        }) {
+                            NavigationButton(text: "Get Directions ")
+                        }
                     }
                 }
-                .navigationBarTitle(Text("Sport Event"))
             }
             .offset(CGSize(width: 0, height: -80))
             .padding()
+            .navigationBarTitle(Text("Sport Event"))
             .onAppear() {
                 self.vm.loadEventDetails()
             }

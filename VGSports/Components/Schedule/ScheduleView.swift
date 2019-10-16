@@ -50,9 +50,13 @@ struct ScheduleView: View {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundColor = UIColor(named: "BackgroundColor")
             UINavigationBar.appearance().tintColor = .white
+            
+            #if os(iOS)
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            #endif
+            
             self.vm.loadSchedule()
         }
         .onDisappear {

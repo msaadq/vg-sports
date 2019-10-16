@@ -29,3 +29,14 @@ struct GameStatusDisplay: View {
             .frame(width: 12, height: 12)
     }
 }
+
+
+struct GameStatusDisplay_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            GameStatusDisplay(status: .notStarted)
+            GameStatusDisplay(status: .inProgress)
+            GameStatusDisplay(status: .finished)
+        }
+    }
+}

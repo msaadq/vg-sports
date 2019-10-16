@@ -15,7 +15,6 @@ class APIService {
     
     // MARK: - Public API
     static let shared = APIService()
-
     static let baseURL = URL(string: "https://sports-app-code-test.herokuapp.com/")!
     let decoder = JSONDecoder()
 

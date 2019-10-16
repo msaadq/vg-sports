@@ -16,7 +16,7 @@ struct ScheduleView: View {
         NavigationView {
             List {
                 ForEach(self.viewModel.listings, id: \.id) { league in
-                    LeagueRow(league: league)
+                    LeagueRow(league: league).environmentObject(self.viewModel)
                     .listRowBackground(Color("BackgroundColor"))
                 }
                 .listRowInsets(EdgeInsets())
@@ -40,6 +40,10 @@ struct ScheduleView: View {
 
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleView()
+        ForEach(["iPhone 6", "iPhone XS Max"], id: \.self) { deviceName in
+            ScheduleView()
+            .previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
+        }
     }
 }

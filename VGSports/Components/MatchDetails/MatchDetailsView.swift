@@ -9,17 +9,24 @@
 import SwiftUI
 
 struct MatchDetailsView: View {
-    var event: SportEvent
+    @ObservedObject var viewModel: MatchDetailsVM
     
     var body: some View {
-        NavigationView {
-            Text("Hello Idiot!")
+        VStack {
+            Image(uiImage: viewModel.eventDetails.awayTeam.logo)
+            Text("eve")
+        }
+        .onAppear() {
+            self.viewModel.loadEventDetails()
+        }
+        .onDisappear {
+            self.viewModel.cancellable?.cancel()
         }
     }
 }
 
 struct MatchDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchDetailsView(event: SportEvent.loadSampleEvent()!)
+        MatchDetailsView(viewModel: MatchDetailsVM(event: SportEvent.loadSampleEvent()!))
     }
 }

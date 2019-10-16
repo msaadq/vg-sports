@@ -24,6 +24,7 @@ struct SportEvent: Codable, Hashable, Identifiable {
     let referee: String?
     let tvChannel: String?
     
+    var tournamentRound: String?
     var homeTeam, awayTeam: Team
 }
 
@@ -78,6 +79,7 @@ extension SportEvent {
         result = try container.decode(Result.self, forKey: .result)
         referee = try? container.decode(String.self, forKey: .referee)
         tvChannel = try? container.decode(String.self, forKey: .tvChannel)
+        tournamentRound = try? container.decode(String.self, forKey: .tournamentRound)
 
         let dateString = try container.decode(String.self, forKey: .startDate)
         if let date = DateFormatter.vgDateFormat.date(from: dateString) {

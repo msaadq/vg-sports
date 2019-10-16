@@ -10,18 +10,41 @@ import SwiftUI
 import Combine
 
 struct ScheduleView: View {
-    @ObservedObject var viewModel = ScheduleVM()
+    @ObservedObject var vm = ScheduleVM()
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(self.viewModel.listings, id: \.id) { league in
-                    LeagueRow(league: league).environmentObject(self.viewModel)
-                    .listRowBackground(Color("BackgroundColor"))
+            ZStack {
+            Color.backgroundColor.edgesIgnoringSafeArea(.all)
+                
+            if !vm.connectionOffline {
+                List {
+                    ForEach(self.vm.listings, id: \.id) { league in
+                        LeagueRow(league: league).environmentObject(self.vm)
+                            .listRowBackground(Color.backgroundColor)
+                    }
+                    .listRowInsets(EdgeInsets())
                 }
-                .listRowInsets(EdgeInsets())
+                .navigationBarTitle(Text("Today"))
             }
-            .navigationBarTitle(Text("Today"))
+            else {
+                
+                    VStack(alignment: .center, spacing: 40) {
+                        Text("You are not connected to the internet. Press the button below to retry!")
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .shadow(radius: 10)
+                        Button(action: {
+                            self.vm.loadSchedule()
+                            
+                        }) {
+                            NavigationButton(text: "Retry ")
+                        }
+                    }
+                    .padding(20)
+                }
+            }
+            
         }
         .onAppear {
             let appearance = UINavigationBarAppearance()
@@ -30,10 +53,10 @@ struct ScheduleView: View {
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
-            self.viewModel.loadSchedule()
+            self.vm.loadSchedule()
         }
         .onDisappear {
-            self.viewModel.cancellable?.cancel()
+            self.vm.cancellable?.cancel()
         }
     }
 }

@@ -67,7 +67,7 @@ struct Venue: Codable {
     let name, city: String
 }
 
-// MARK: - Custom Date Decoding
+// MARK: - Custom Date Decoding and sample JSON
 extension SportEvent {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -160,7 +160,24 @@ extension SportEvent {
         }
     }
     
-    func displayStartDate() -> String {
+    func displayStartTimeWithDate() -> String {
+        let hours = Calendar.current.component(.hour, from: self.startDate)
+        let minutes = Calendar.current.component(.minute, from: self.startDate)
+        
+        if Calendar.current.isDateInToday(self.startDate) {
+            if hours <= 1 {
+                return "in \(minutes) minutes"
+            } else {
+                return "in \(hours) hours"
+            }
+        } else {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            return "at \(dateFormatter.string(from: self.startDate)) \(self.displayStartDate())"
+        }
+    }
+    
+    private func displayStartDate() -> String {
         if Calendar.current.isDateInToday(self.startDate) {
             return ""
         }
@@ -170,9 +187,19 @@ extension SportEvent {
         else {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd-MM-YYYY"
-            return dateFormatter.string(from: self.startDate)
+            return "on \(dateFormatter.string(from: self.startDate))"
         }
     }
 }
+
+
+// MARK: - Full Venue
+extension Venue {
+    func getVenue() -> String {
+        return "\(self.name), \(self.city)"
+    }
+}
+
+
 
 

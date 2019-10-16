@@ -9,14 +9,10 @@
 import Foundation
 
 // TODO: Apply these values in the SwiftUI files once Apple fixes the SwiftUI bugs
-struct Constants {
-    struct Colors {
-        static let backgroundColor = "BackgroundColor"
-        static let cellColor = "CellColor"
-    }
-    
+struct Constants {    
     struct Placeholders {
         static let failure = "FailedPlaceholder"
+        static let venueIcon = "VenueIcon"
     }
     
     struct Config {

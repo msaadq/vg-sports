@@ -54,6 +54,13 @@
 		93F6A50C2345F39600263D91 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A50B2345F39600263D91 /* ScheduleVM.swift */; };
 		93F6A50D2345F39600263D91 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A50B2345F39600263D91 /* ScheduleVM.swift */; };
 		93F6A50E2345F39600263D91 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6A50B2345F39600263D91 /* ScheduleVM.swift */; };
+		93FD78342356BEE500662EDE /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78332356BEE500662EDE /* NavigationButton.swift */; };
+		93FD78362356BF9A00662EDE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78352356BF9A00662EDE /* Color.swift */; };
+		93FD78372356BF9A00662EDE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78352356BF9A00662EDE /* Color.swift */; };
+		93FD78382356BF9A00662EDE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78352356BF9A00662EDE /* Color.swift */; };
+		93FD783A2356CF9E00662EDE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78392356CF9E00662EDE /* String.swift */; };
+		93FD783B2356CF9E00662EDE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78392356CF9E00662EDE /* String.swift */; };
+		93FD783C2356CF9E00662EDE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD78392356CF9E00662EDE /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +108,9 @@
 		93F6A5032345F37900263D91 /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		93F6A5072345F38D00263D91 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		93F6A50B2345F39600263D91 /* ScheduleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVM.swift; sourceTree = "<group>"; };
+		93FD78332356BEE500662EDE /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		93FD78352356BF9A00662EDE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		93FD78392356CF9E00662EDE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 				93BD1F3923569608006461B2 /* EventTeamRep.swift */,
 				93BD1F3D23569663006461B2 /* GameStatusDisplay.swift */,
 				93EA4431235432E0007397C1 /* LeagueRow.swift */,
+				93FD78332356BEE500662EDE /* NavigationButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				93EA442D23540091007397C1 /* DateFormatter.swift */,
+				93FD78352356BF9A00662EDE /* Color.swift */,
+				93FD78392356CF9E00662EDE /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,9 +182,9 @@
 		93F6A4B52345EEBF00263D91 /* VGSports */ = {
 			isa = PBXGroup;
 			children = (
-				93BD1F38235695C4006461B2 /* Views */,
 				93F6A4E92345F25E00263D91 /* Launch */,
 				93F6A4EC2345F28600263D91 /* Components */,
+				93BD1F38235695C4006461B2 /* Views */,
 				93F6A4EB2345F28200263D91 /* Models */,
 				93F6A4EA2345F27700263D91 /* Utils */,
 				93EA442C2354007A007397C1 /* Extensions */,
@@ -241,8 +254,8 @@
 		93F6A4EC2345F28600263D91 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				93F6A4EE2345F2AE00263D91 /* MatchDetails */,
 				93F6A4ED2345F2A800263D91 /* Schedule */,
+				93F6A4EE2345F2AE00263D91 /* MatchDetails */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -396,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93FD783A2356CF9E00662EDE /* String.swift in Sources */,
 				93F6A4B72345EEBF00263D91 /* AppDelegate.swift in Sources */,
 				93BD1F4223569A67006461B2 /* Constants.swift in Sources */,
 				93F6A4F12345F2E700263D91 /* APIService.swift in Sources */,
@@ -412,6 +426,8 @@
 				93F6A5082345F38D00263D91 /* ScheduleView.swift in Sources */,
 				93BD1F3A23569608006461B2 /* EventTeamRep.swift in Sources */,
 				93F6A4F82345F32D00263D91 /* SportEvent.swift in Sources */,
+				93FD78342356BEE500662EDE /* NavigationButton.swift in Sources */,
+				93FD78362356BF9A00662EDE /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,11 +443,13 @@
 				93BD1F4323569A67006461B2 /* Constants.swift in Sources */,
 				93F6A5092345F38D00263D91 /* ScheduleView.swift in Sources */,
 				93EA4433235432E0007397C1 /* LeagueRow.swift in Sources */,
+				93FD78372356BF9A00662EDE /* Color.swift in Sources */,
 				93EA442F23540091007397C1 /* DateFormatter.swift in Sources */,
 				93EA442623511D95007397C1 /* Reachability.swift in Sources */,
 				93F6A4D12345EEC200263D91 /* VGSportsTests.swift in Sources */,
 				93BD1F3F23569663006461B2 /* GameStatusDisplay.swift in Sources */,
 				93F6A50D2345F39600263D91 /* ScheduleVM.swift in Sources */,
+				93FD783B2356CF9E00662EDE /* String.swift in Sources */,
 				93F6A5012345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,11 +466,13 @@
 				93BD1F4423569A67006461B2 /* Constants.swift in Sources */,
 				93F6A50A2345F38D00263D91 /* ScheduleView.swift in Sources */,
 				93EA4434235432E0007397C1 /* LeagueRow.swift in Sources */,
+				93FD78382356BF9A00662EDE /* Color.swift in Sources */,
 				93EA443023540091007397C1 /* DateFormatter.swift in Sources */,
 				93EA442723511D95007397C1 /* Reachability.swift in Sources */,
 				93F6A4DC2345EEC200263D91 /* VGSportsUITests.swift in Sources */,
 				93BD1F4023569663006461B2 /* GameStatusDisplay.swift in Sources */,
 				93F6A50E2345F39600263D91 /* ScheduleVM.swift in Sources */,
+				93FD783C2356CF9E00662EDE /* String.swift in Sources */,
 				93F6A5022345F36C00263D91 /* MatchDetailsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

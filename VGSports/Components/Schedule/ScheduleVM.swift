@@ -22,6 +22,7 @@ public class ScheduleVM: ObservableObject {
             return
         }
 
+        connectionOffline = false
         cancellable = APIService.shared.getAPIResponseMapper(modelObject: [LeagueListing].self, endpoint: .events, params: ["date": "today"])
             .sink(receiveCompletion: { (completion) in
                 switch completion {

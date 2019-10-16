@@ -27,6 +27,7 @@ struct EventTeamRep: View {
                 .foregroundColor(.primary)
                 .font(.callout)
                 .shadow(radius: 10)
+                .lineLimit(1)
             isWinner ?
             Text("Winner")
                 .italic()

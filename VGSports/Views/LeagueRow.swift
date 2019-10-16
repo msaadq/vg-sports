@@ -34,9 +34,10 @@ struct LeagueRow: View {
                     
                     // TODO: Move the single event cell to a separate struct once the SwiftUI bug is fixed
                     ForEach(self.league.events, id: \.self) { event in
-                        NavigationLink(destination: MatchDetailsView(viewModel: MatchDetailsVM(event: event))) {
+                        NavigationLink(destination: MatchDetailsView(vm: MatchDetailsVM(event: event))) {
                             ZStack {
                                 Rectangle()
+                                    // TODO: User colors from the extensions file
                                     .fill(Color("CellColor"))
                                     .shadow(radius: 5)
                                     .cornerRadius(20)

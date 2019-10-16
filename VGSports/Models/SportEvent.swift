@@ -14,7 +14,7 @@ struct EventWrapper: Codable {
     let event: SportEvent
 }
 
-// MARK: - SportEvent
+// MARK: - SportEvent: data structure for getting details about individual sport events
 struct SportEvent: Codable, Hashable, Identifiable {
     let id: Int
     let startDate: Date
@@ -67,7 +67,7 @@ struct Venue: Codable {
     let name, city: String
 }
 
-// MARK: - Custom Date Decoding and sample JSON
+// MARK: - Custom Date Decoding and sample JSON loader for previewing in the debugger
 extension SportEvent {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

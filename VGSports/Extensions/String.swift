@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: String: To replace foreign characters with their url-safe versions from venue addresses for Google Maps directions
 extension String {
     private static let safeCharacters = CharacterSet(charactersIn: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-")
 

@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+// MARK: Color: both dark mode and light mode versions of the colors are available in Assets file
 extension Color {
     public static var backgroundColor: Color {
         Color("BackgroundColor", bundle: nil)

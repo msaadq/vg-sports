@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// MARK: - LeagueListing
+// MARK: - LeagueListing: main data structure for getting the schedule of events classified in leagues
 struct LeagueListing: Codable, Identifiable {
     let id: Int
     let name: String
@@ -24,6 +24,7 @@ struct LeagueListing: Codable, Identifiable {
     var logo : UIImage!
 }
 
+// MARK: - Sample JSON loader for previewing in the debugger
 extension LeagueListing {
     static func loadSampleListings() -> [LeagueListing]? {
         let listings = """

@@ -9,7 +9,10 @@
 import Foundation
 import Combine
 
+// MARK: - ScheduleVM
 public class MatchDetailsVM: ObservableObject {
+    
+    // MARK: - Public API
     @Published var eventDetails: SportEvent!
     @Published var connectionOffline = false
     
@@ -44,8 +47,9 @@ public class MatchDetailsVM: ObservableObject {
     }
 }
 
+// MARK: - Private Helper Methods
 extension MatchDetailsVM {
-    static func mergeEvents(event1: SportEvent, event2: SportEvent) -> SportEvent {
+    private static func mergeEvents(event1: SportEvent, event2: SportEvent) -> SportEvent {
         var mergedEvent = event2
         mergedEvent.homeTeam.logo = event1.homeTeam.logo
         mergedEvent.awayTeam.logo = event1.awayTeam.logo

@@ -12,6 +12,8 @@ import UIKit
 
 // MARK: - APIService
 class APIService {
+    
+    // MARK: - Public API
     static let shared = APIService()
 
     static let baseURL = URL(string: "https://sports-app-code-test.herokuapp.com/")!
@@ -44,24 +46,6 @@ class APIService {
         case small = "clip-32x32"
         case medium = "clip-56x56"
         case large = "clip-112x112"
-    }
-
-    // MARK: - URL Request Publisher
-    func getRemoteDataPublisher(url: URLRequest) -> AnyPublisher<Data, Error> {
-        return URLSession.shared.dataTaskPublisher(for: url)
-        .retry(3)
-        .tryMap { data, response -> Data in
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                print("HTTP Error")
-                throw APIError.httpError
-            }
-            return data
-        }
-        .mapError { error in
-            print(error.localizedDescription)
-            return APIError.unknownError(error: error)
-        }
-        .eraseToAnyPublisher()
     }
 
     // MARK: - URL Request Mapper
@@ -108,5 +92,24 @@ class APIService {
             .replaceError(with: UIImage(named: "FailedPlaceholder")!)
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
+    }
+    
+    
+    // MARK: - Private URL Request Publisher
+    private func getRemoteDataPublisher(url: URLRequest) -> AnyPublisher<Data, Error> {
+        return URLSession.shared.dataTaskPublisher(for: url)
+        .retry(3)
+        .tryMap { data, response -> Data in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("HTTP Error")
+                throw APIError.httpError
+            }
+            return data
+        }
+        .mapError { error in
+            print(error.localizedDescription)
+            return APIError.unknownError(error: error)
+        }
+        .eraseToAnyPublisher()
     }
 }

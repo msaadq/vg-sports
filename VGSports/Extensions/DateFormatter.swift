@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - DateFormatter: to parse the date returned by served to Date object
 extension DateFormatter {
     static let vgDateFormat: DateFormatter = {
         let formatter = DateFormatter()

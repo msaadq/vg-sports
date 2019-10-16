@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: Constants
 // TODO: Apply these values in the SwiftUI files once Apple fixes the SwiftUI bugs
 struct Constants {    
     struct Placeholders {

@@ -10,7 +10,10 @@ import Foundation
 import Combine
 import UIKit
 
+// MARK: - ScheduleVM
 public class ScheduleVM: ObservableObject {
+    
+    // MARK: - Public API
     @Published var listings = [LeagueListing]()
     @Published var connectionOffline = false
     
@@ -37,7 +40,12 @@ public class ScheduleVM: ObservableObject {
             })
     }
     
-    func loadLeagueLogos() {
+    deinit {
+        cancellable?.cancel()
+    }
+    
+    // MARK: - Private Methods
+    private func loadLeagueLogos() {
         let size = APIService.LogoSize.large
         
         for (index, league) in listings.enumerated() {
@@ -46,7 +54,7 @@ public class ScheduleVM: ObservableObject {
         }
     }
     
-    func loadEventTeamsLogos() {
+    private func loadEventTeamsLogos() {
         let size = APIService.LogoSize.large
         for (leagueIndex, league) in listings.enumerated() {
                 for (index, event) in league.events.enumerated() {
@@ -57,9 +65,5 @@ public class ScheduleVM: ObservableObject {
                         .sink { self.listings[leagueIndex].events[index].awayTeam.logo = $0 }
                 }
             }
-    }
-    
-    deinit {
-        cancellable?.cancel()
     }
 }

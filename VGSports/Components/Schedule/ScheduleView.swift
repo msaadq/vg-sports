@@ -67,7 +67,7 @@ struct ScheduleView: View {
 
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone 6", "iPhone XS Max"], id: \.self) { deviceName in
+        ForEach(["iPhone XS", "Apple TV"], id: \.self) { deviceName in
             ScheduleView()
             .previewDevice(PreviewDevice(rawValue: deviceName))
             .previewDisplayName(deviceName)

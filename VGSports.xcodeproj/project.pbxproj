@@ -213,9 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				93F6A4EC2345F28600263D91 /* Components */,
-				93BD1F38235695C4006461B2 /* Custom Views */,
 				93F6A4EB2345F28200263D91 /* Models */,
 				93F6A4EA2345F27700263D91 /* Utils */,
+				93BD1F38235695C4006461B2 /* Custom Views */,
 				93EA442C2354007A007397C1 /* Extensions */,
 				93F6A4E92345F25E00263D91 /* Launch-iOS */,
 				939F877B2357716D00746FF2 /* Launch-tvOS */,

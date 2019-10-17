@@ -29,7 +29,7 @@ struct MatchDetailsView: View {
                     }
                 }
                 
-                HStack {
+                HStack{
                     EventTeamRep(logo: vm.eventDetails.homeTeam.logo, teamName: vm.eventDetails.homeTeam.name, isWinner: vm.eventDetails.homeTeam.isWinner)
                     VStack(spacing: 26) {
                         HStack(alignment: .center) {
@@ -61,6 +61,7 @@ struct MatchDetailsView: View {
                         .padding(.top)
                         .padding(.leading)
                         
+                        #if os(iOS)
                         Button(action: {
                             let url = "comgooglemaps://?daddr=\(self.vm.eventDetails.venue!.getVenue().replacingOccurrences(of: " ", with: "+").replaceSpecialCharacters() ?? "Unknown location")"
                             
@@ -74,6 +75,7 @@ struct MatchDetailsView: View {
                         }) {
                             NavigationButton(text: "Get Directions ")
                         }
+                        #endif
                     }
                 }
             }
